@@ -1,0 +1,70 @@
+<!-- 1. Popup Window-->
+
+<!DOCTYPE html>
+<html lang"en-us">
+<head>
+<meta charset="utf-8">
+<body>
+
+<h2>This is the first exercise</h2>
+<p>A popup window that states: This is Bruno's example</p>
+
+<script>
+window.alert("Greetings! This is Bruno's Example");
+</script>
+
+</body>
+</html> 
+
+<!-- 2. Display a customized scripture to a user-->
+
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Bruno's Favourite Scripture</title>
+<script>
+function favouriteScripture() {
+    var name = document.getElementById('nameInputBox').value;
+	    var scripture = "<br>" + "For " + name + " so loved the world " +
+        "that he gave his only begotten Son, that whosoever " +
+        "believeth in him should not perish, but have everlasting life." +
+		"<br>" +
+		"<h3><b><i>John 3:16</h3></b></i>"
+    document.getElementById('outputDiv').innerHTML = scripture;
+}
+</script>
+</head>
+
+<body>Another name used for heavenly Father (hint: John 3:16)" <input type="text" id="nameInputBox">    
+<button type="button" onclick="favouriteScripture()">Verse</button>
+<div id="outputDiv"></div>
+</body>       
+</html>
+
+<!-- 3. Display a customized scripture to a user-->
+
+<!-- Make sure "external.js" file is in the same folder -->
+
+<html>
+	<head>
+		<title>Both "Hello World" from JavaScript and HTML 5</title>
+		<script language="javascript" type="text/javascript">
+			function demoFunction()
+			{
+				document.write("Hello from DemoFunction!!!");
+			}
+		</script>
+	</head>
+	<body>
+			<p>Hello from HTML</p>
+			<script language="javascript" type="text/javascript">
+				document.write("<h2>Hello from JavaScript</h2>");
+			</script>
+			<script language="javascript" type="text/javascript" src="external.js">
+			</script>
+			<br>
+			<br>
+			<input type="button" value="Click here to check my DemoFunction" onclick="demoFunction()" />
+		</body>
+</html>
