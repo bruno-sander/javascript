@@ -1,0 +1,25 @@
+<!-- 2. Display a customized scripture to a user-->
+
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Bruno's Favourite Scripture</title>
+<script>
+function favouriteScripture() {
+    var name = document.getElementById('nameInputBox').value;
+	    var scripture = "<br>" + "For " + name + " so loved the world " +
+        "that he gave his only begotten Son, that whosoever " +
+        "believeth in him should not perish, but have everlasting life." +
+		"<br>" +
+		"<h3><b><i>John 3:16</h3></b></i>"
+    document.getElementById('outputDiv').innerHTML = scripture;
+}
+</script>
+</head>
+
+<body>Another name used for heavenly Father (hint: John 3:16)" <input type="text" id="nameInputBox">    
+<button type="button" onclick="favouriteScripture()">Verse</button>
+<div id="outputDiv"></div>
+</body>       
+</html>

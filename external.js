@@ -1,0 +1,1 @@
+document.write("<strong>This file came from the external.js file!!! </strong>");

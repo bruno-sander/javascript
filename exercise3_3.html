@@ -1,0 +1,26 @@
+<!-- 3. Display a customized scripture to a user-->
+
+<!-- Make sure "external.js" file is in the same folder -->
+
+<html>
+	<head>
+		<title>Both "Hello World" from JavaScript and HTML 5</title>
+		<script language="javascript" type="text/javascript">
+			function demoFunction()
+			{
+				document.write("Hello from DemoFunction!!!");
+			}
+		</script>
+	</head>
+	<body>
+			<p>Hello from HTML</p>
+			<script language="javascript" type="text/javascript">
+				document.write("<h2>Hello from JavaScript</h2>");
+			</script>
+			<script language="javascript" type="text/javascript" src="external.js">
+			</script>
+			<br>
+			<br>
+			<input type="button" value="Click here to check my DemoFunction" onclick="demoFunction()" />
+		</body>
+</html>
