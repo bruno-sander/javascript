@@ -1,0 +1,43 @@
+<!-- 2. Mileage-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+ <head>
+ <meta charset="utf-8">
+ <title>Mileage Calculator</title>
+ </head>
+ <body>
+ 
+ <form>
+ <p>Odometer Start:
+ <input id="odometerBeg" type="number" required></p>
+ <p>Odometer End: 
+ <input id="odometerEnd" type="number" required></p>
+ <p>Gallons:
+ <input id="gallons" type="number" required></p>
+ <button type="button" style="background-color:#1981CD" onclick="calculate()">Click Here to Calculate </button>
+ <p><b>Miles per gallon: <span id="answer"></b></span></p>
+ </form>
+
+ <script>
+ var odometerBeg,
+ odometerEnd,
+ gallons,
+ a;
+ 
+ function calculate() {
+ odometerBeg = parseFloat(document.getElementById("odometerBeg").value);
+ odometerEnd = parseFloat(document.getElementById("odometerEnd").value);
+ gallons = parseFloat(document.getElementById("gallons").value);
+
+ if (odometerBeg > odometerEnd) {
+ a = "Ending should be higher than beginning.";
+ } else {
+ a = (odometerEnd - odometerBeg) / gallons;
+ }
+ document.getElementById("answer").innerHTML = a;
+ };
+ </script>
+
+ </body>
+</html>
