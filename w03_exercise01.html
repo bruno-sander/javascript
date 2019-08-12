@@ -1,0 +1,28 @@
+<!-- 1. Quarts to Gallons-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+
+<title>Quarts to Gallons</title>
+
+</head>
+<body>
+<script>
+function conversion() {
+var quarts = document.getElementById("quarts").value;
+var x = quarts / 1.057;
+var digits = 2;
+var multiplier = Math.pow(10, digits);
+liters = Math.round(x * multiplier) / multiplier + " Gallons";
+document.getElementById("myDiv").innerHTML = liters;
+}
+
+</script>
+<b>Enter quarts here</b>
+<input type="text" id="quarts" size="2">
+<button type="button" style="background-color:#1981CD" onclick="conversion()">Convert</button>
+<div id="myDiv"> </div>
+</body>
+</html>
