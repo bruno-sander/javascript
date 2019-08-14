@@ -1,0 +1,52 @@
+<!Doctype html>
+<html>
+    <head>
+    <title>What to wear??</title>
+    </head>
+    <body>
+
+        <div class="stage">
+                <form>
+                <p>Select the weather:</p>
+                <select id="weather">
+                    <option value="hot">Hot</option>
+                    <option value="rain">Rain</option>
+                    <option value="snow">Snow</option>
+                    <option value="windy">Windy</option>
+                    <option value="humid">Humid</option>
+                </select>
+                
+                <button id="submit" type="button">Submit</button>
+                
+                <p>You should wear: <span id="answer"></span></p>
+            </form>
+        </div>
+        
+        <script>
+            var firstNo,
+                secondNo,
+                a;
+            var submit = document.getElementById("submit");
+            
+            function calculate() {
+                var weather = document.getElementById("weather").value;
+                console.log(weather);
+                
+                if (weather == "hot") {
+                    a = "Sandals";
+                } else if (weather == "rain") {
+                    a = "Galoshes";
+                } else if (weather == "snow") {
+                    a = "Boots";
+                } else {
+                    a = "Shoes";
+                }
+            
+                document.getElementById("answer").innerHTML = a;
+            };
+            
+            submit.addEventListener("click", calculate);
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Test your Skills!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body>
+
+        <h2>Test here your Math Skills!</h2>
+        <div class="stage">
+                <input id="firstNo" type="number" required>
+                <input id="sign" type="text" required>
+                <input id="secondNo" type="number" required> = 
+                <input id="userAnswer" type="number" required>
+                <p></p>
+                <button id="submit" type="button">Submit</button>
+                
+                <p>Result: <span id="feedback"></span></p>
+            </form>
+        </div>
+        
+        <script>
+            var firstNo,
+                secondNo,
+                sign,
+                userAnswer,
+                correctAnswer,
+                feedback;
+            var submit = document.getElementById("submit");
+            
+            function calculate() {
+                var firstNo = parseFloat(document.getElementById("firstNo").value);
+                var secondNo = parseFloat(document.getElementById("secondNo").value);
+                var userAnswer = parseFloat(document.getElementById("userAnswer").value);
+                var sign = document.getElementById("sign").value;
+                
+                if (sign == "+") {
+                    correctAnswer = firstNo + secondNo;
+                    check(correctAnswer, userAnswer);
+                };
+                
+                if (sign == "-") {
+                    correctAnswer = firstNo - secondNo;
+                    check(correctAnswer, userAnswer);
+                };
+                
+                if (sign == "*") {
+                    correctAnswer = firstNo * secondNo;
+                    check(correctAnswer, userAnswer);
+                };
+            
+                if (sign == "/") {
+                    correctAnswer = firstNo / secondNo;
+                    check(correctAnswer, userAnswer);
+                };
+                
+                document.getElementById("feedback").innerHTML = feedback;
+            };
+            
+            //This function will check to see if the user's answer is correct or not.
+            function check(correct, user) {
+                if (correct == user) {
+                    feedback = "Correct! Good job!"
+                } else {
+                    feedback = "Incorrect. Try again."
+                }
+            };
+            
+            submit.addEventListener("click", calculate);
+        </script>
+        
+    </body>
+</html>
